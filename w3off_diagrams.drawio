@@ -1,0 +1,156 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36" version="26.0.8">
+  <diagram name="Page-1" id="SyCepS_xqdPUCtJFy5jW">
+    <mxGraphModel dx="2071" dy="733" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="8g-UTXZgVYF0mti-iqle-4" value="" style="endArrow=none;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="254" y="500" as="sourcePoint" />
+            <mxPoint x="254" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8g-UTXZgVYF0mti-iqle-5" value="" style="endArrow=none;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="474" y="500" as="sourcePoint" />
+            <mxPoint x="474" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8g-UTXZgVYF0mti-iqle-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="8g-UTXZgVYF0mti-iqle-1" target="8g-UTXZgVYF0mti-iqle-47" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-27" y="350" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-27" y="390" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8g-UTXZgVYF0mti-iqle-1" value="Observer&lt;div&gt;[ Python ]&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="103" y="350" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8g-UTXZgVYF0mti-iqle-2" value="Signer&lt;br&gt;[ Python ]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="303" y="350" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8g-UTXZgVYF0mti-iqle-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="8g-UTXZgVYF0mti-iqle-3" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="753" y="345" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8g-UTXZgVYF0mti-iqle-3" value="Sender&lt;br&gt;[ Python ]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="503" y="350" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8g-UTXZgVYF0mti-iqle-6" value="&lt;font color=&quot;#009900&quot;&gt;ONLINE &lt;/font&gt;/ &lt;font color=&quot;#cc0000&quot;&gt;OFFLINE*&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="133" y="260" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8g-UTXZgVYF0mti-iqle-7" value="&lt;font color=&quot;#cc0000&quot;&gt;OFFLINE&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="333" y="260" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8g-UTXZgVYF0mti-iqle-8" value="&lt;font color=&quot;#009900&quot;&gt;ONLINE&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="533" y="260" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8g-UTXZgVYF0mti-iqle-9" value="* can work offline with cached data from previous runs or manually provided" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="70" y="510" width="560" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8g-UTXZgVYF0mti-iqle-10" value="" style="endArrow=none;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="78" y="298" as="sourcePoint" />
+            <mxPoint x="648" y="298" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8g-UTXZgVYF0mti-iqle-11" value="" style="endArrow=none;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="78" y="250" as="sourcePoint" />
+            <mxPoint x="648" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8g-UTXZgVYF0mti-iqle-15" value="" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=14;align=left;" parent="1" vertex="1">
+          <mxGeometry x="70" y="420" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="8g-UTXZgVYF0mti-iqle-17" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#FFFFFF;fillColor=default;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="423" y="379.5" as="sourcePoint" />
+            <mxPoint x="503" y="379.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8g-UTXZgVYF0mti-iqle-16" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#FFFFFF;labelBorderColor=none;fillColor=default;" parent="1" source="8g-UTXZgVYF0mti-iqle-1" target="8g-UTXZgVYF0mti-iqle-2" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="323" y="400" as="sourcePoint" />
+            <mxPoint x="373" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8g-UTXZgVYF0mti-iqle-23" value="" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="245" y="345" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="8g-UTXZgVYF0mti-iqle-24" value="Transaction&amp;nbsp;&lt;br&gt;(tx)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="259" y="320" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8g-UTXZgVYF0mti-iqle-26" value="" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="462" y="345" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="8g-UTXZgVYF0mti-iqle-27" value="Signed Transaction (signed_tx)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="480" y="308" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8g-UTXZgVYF0mti-iqle-29" value="Blockchain" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="690" y="228" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8g-UTXZgVYF0mti-iqle-32" value="" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=14;" parent="1" vertex="1">
+          <mxGeometry x="480" y="420" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="8g-UTXZgVYF0mti-iqle-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;dashed=1;" parent="1" source="8g-UTXZgVYF0mti-iqle-33" target="8g-UTXZgVYF0mti-iqle-3" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="770" y="395" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8g-UTXZgVYF0mti-iqle-33" value="RPC Node Provider&lt;br&gt;[web3.py]" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="1" vertex="1">
+          <mxGeometry x="693" y="298" width="120" height="47" as="geometry" />
+        </mxCell>
+        <mxCell id="8g-UTXZgVYF0mti-iqle-35" value="" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="720" y="400" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="8g-UTXZgVYF0mti-iqle-36" value="Tx Receipt" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="740" y="395" width="72" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8g-UTXZgVYF0mti-iqle-41" value="Blockchain" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-90" y="228" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8g-UTXZgVYF0mti-iqle-42" value="RPC Node Provider&lt;br&gt;[web3.py]" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="1" vertex="1">
+          <mxGeometry x="-87" y="298" width="120" height="47" as="geometry" />
+        </mxCell>
+        <mxCell id="8g-UTXZgVYF0mti-iqle-46" value="&amp;lt;&amp;lt; query address &amp;amp; smart contract data &amp;gt;&amp;gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="-80" y="395" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8g-UTXZgVYF0mti-iqle-47" value="Local Cache*&lt;br&gt;[ cache.json ]" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-87" y="345" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8g-UTXZgVYF0mti-iqle-49" value="" style="points=[[0,0.5,0],[0.24,0,0],[0.5,0.28,0],[0.995,0.475,0],[0.5,0.72,0],[0.24,1,0]];verticalLabelPosition=bottom;sketch=0;html=1;verticalAlign=top;aspect=fixed;align=center;pointerEvents=1;shape=mxgraph.cisco19.key;fillColor=#005073;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="340.78" y="303" width="44.44" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="8g-UTXZgVYF0mti-iqle-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0.72;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="8g-UTXZgVYF0mti-iqle-2" target="8g-UTXZgVYF0mti-iqle-49" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8g-UTXZgVYF0mti-iqle-52" value="&amp;lt;&amp;lt; access pkey once to sign &amp;gt;&amp;gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="358" y="318" width="106" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8g-UTXZgVYF0mti-iqle-55" value="- connects to network node to distribute (send) the signed tx&lt;br&gt;- verifies tx status and tracks related events&lt;br&gt;- pkey is not used" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="483" y="412" width="185" height="97" as="geometry" />
+        </mxCell>
+        <mxCell id="8g-UTXZgVYF0mti-iqle-64" value="- queries the network and smart contracts to build the tx&lt;br&gt;-&amp;nbsp;calculates gas and gas price&lt;br&gt;- ensures token approvals and generates multiple tx if needed&lt;br&gt;- pkey is not used" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="72" y="450" width="168" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8g-UTXZgVYF0mti-iqle-65" value="" style="group" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="259" y="413" width="210" height="97" as="geometry" />
+        </mxCell>
+        <mxCell id="8g-UTXZgVYF0mti-iqle-31" value="" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=14;align=left;" parent="8g-UTXZgVYF0mti-iqle-65" vertex="1">
+          <mxGeometry y="6" width="210" height="91" as="geometry" />
+        </mxCell>
+        <mxCell id="8g-UTXZgVYF0mti-iqle-54" value="- securely accesses encrypted pkey to sign the transaction (vault)&lt;br&gt;- purges key from memory once finished&lt;br&gt;- &lt;b&gt;guarantees offline execution&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="8g-UTXZgVYF0mti-iqle-65" vertex="1">
+          <mxGeometry x="5" width="185" height="97" as="geometry" />
+        </mxCell>
+        <mxCell id="8g-UTXZgVYF0mti-iqle-67" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;w3off&lt;span style=&quot;background-color: initial; font-size: 12px; font-weight: normal;&quot;&gt;.&lt;/span&gt;&lt;/h1&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="330" y="191" width="71" height="42" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
