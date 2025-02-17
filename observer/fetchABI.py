@@ -28,6 +28,7 @@ def fetchABI(contract_address):
     if abi is not None:
         return abi
 
+    assert config.ethscan_api_key, "Please sign up on etherscan and save your API key to environment variable named ETHSCAN_API_KEY to use this application."
     url = f"https://api.etherscan.io/v2/api?chainid={w3.eth.chain_id}&module=contract&action=getabi&address={contract_address}&apikey={config.ethscan_api_key}"
     response = requests.get(url)
     if response.status_code == 200:
@@ -62,6 +63,7 @@ def implementationAddress(address):
     address = w3.to_checksum_address(address)
     response_json = checkImplementationCache(address)
     if not response_json:
+        assert config.ethscan_api_key, "Please sign up on etherscan and save your API key to environment variable named ETHSCAN_API_KEY to use this application."
         response = requests.post(
             f"https://api.etherscan.io/v2/api?chainid={w3.eth.chain_id}&module=contract&action=getsourcecode&address={address}&apikey={config.ethscan_api_key}"
         )

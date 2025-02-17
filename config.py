@@ -42,7 +42,7 @@ except:
 
 # DEFAULT VALUES FOR API URLs
 # Choose network browser
-ethscan_api_key = os.environ["ETHSCAN_API_KEY"]
+ethscan_api_key = os.environ.get("ETHSCAN_API_KEY","")
 # Choose one of the following node providers below:
 web3_provider_url = chains[chain_name]["rpc_provider"]
 # web3_provider_url = f"https://mainnet.infura.io/v3/{os.environ['INFURA_API_KEY']}" if not DEBUG else "debug"

@@ -234,6 +234,7 @@ def handleApprovalIfRequired(
 
 
 def calculateGasBasedOnHistory(contract_address, f_signature):
+    assert config.ethscan_api_key, "Please sign up on etherscan and save your API key to environment variable named ETHSCAN_API_KEY to use this application."
     response = requests.post(
         f"https://api.etherscan.io/v2/api?chainId={w3.eth.chain_id}&module=account&action=txlist&address={contract_address}&startblock=0&endblock=99999999&page=1&offset=10000&sort=asc&apikey={config.ethscan_api_key}"
     )

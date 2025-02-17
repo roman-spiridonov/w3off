@@ -52,7 +52,7 @@ def normalize_addresses():
 
 
 def insert_rpc_placeholder(full_str, matched_str):
-    result = os.environ[matched_str] or input(
+    result = os.environ.get(matched_str,"") or input(
         f"Could not find environment variable **{matched_str}** (in {full_str}) . Please enter desired value manually: "
     )
     return result
