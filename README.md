@@ -49,9 +49,11 @@ The solution consists of three modules, intended to be run one after the other:
 
 # Configuration
 You can configure the tool for your own use by following this sequence:
-1) Configure chains and RPC providers in `chains.yaml`
-2) Configure default values or preferences in `config.py`.
-3) The application aims to cache web requests to `cache.json` persistently (mostly, contract ABIs or bytecodes). Since this data rarely chages on the network, the cache is never invalidated by the utilities. Clean the cache manually as needed by removing this file, e.g. if you suspect smart contract info in it may be outdated.
+1) Configure chains and RPC providers in [`w3off/chains.yaml`](w3off/chains.yaml).
+2) [Optional] Configure default values or preferences in [`w3off/config.py`](w3off/config.py).
+3) The application aims to cache web requests to `w3off/cache.json` persistently (mostly, contract ABIs or bytecodes). Since this data rarely chages on the network, the cache is never invalidated by the utilities. Clean the cache manually as needed by removing this file, e.g. if you suspect smart contract info in it may be outdated.
+
+If you are installing the `w3off` package with `pip`, you can put your settings to `~/.w3off` folder, i.e. `~/.w3off/chains.yaml`. In this case, this folder will be used for both settings and cache instead.
 
 # Usage
 Execute the following in CLI and it will launch the tool in interactive mode. It will always prompt you before proceeding to next step so don't worry.
@@ -66,7 +68,7 @@ $ python -m unittest discover
 
 Simple launch:
 ```
-$ python w3off
+$ python -m w3off
 ```
 
 Or launch one by one:
@@ -87,6 +89,16 @@ Or this:
 ```
 # send raw transaction passed as a string
 $ echo "0x..." | python -m sender  
+```
+
+
+Alternatively, you can install the executable scripts via `pip`:
+```
+$ pip install w3off
+$ w3off
+$ w3observer
+$ w3signer
+$ w3sender
 ```
 
 <!-- Deprecated:
