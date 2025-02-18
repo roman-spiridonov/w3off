@@ -1,1 +1,1 @@
-from observer import *
+from w3off.observer import *

@@ -1,1 +1,1 @@
-from sender.w3sender import sendRawTx, waitForReceipt, run_sender
+from w3off.sender import *

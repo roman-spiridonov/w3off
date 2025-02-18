@@ -1,6 +1,8 @@
+[![Build and Test](https://github.com/roman-spiridonov/w3off/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/roman-spiridonov/w3off/actions/workflows/build-and-test.yml)
+
 **`w3off`** (**W**eb3 **Off**line) is a collection of CLI utilities for offline wallet management. The intended use case is creation and signing of transactions offline.
 
-Currently supports only `EVM` networks. Default configurations are specified for the following networks, but you can easily add more in `chains.yaml`:
+Currently supports only `EVM` networks. Default configurations are specified for the following networks, but you can easily add more in [`chains.yaml`](w3off/chains.yaml):
 * Ethereum (MainNet)
 * Ethereum Sepolia (TestNet)
 * Base 
@@ -28,7 +30,7 @@ There are some web3 wallets which provide support for offline transactions (e.g.
 *2.1) MEW* - Great for simple fund movements (ETH or ERC20 tokens), but if you want to construct a more complex transaction, such as staking your USDT for additional yield, or other smart contract interactions, this functionality is not supported. However, MEW's *"send offline" helper* is helpful and you can use it to broadcast signed transactions created with help of `w3off` utilities (specifically, `observer` and `signer`).\
 *2.2) MyCrypto* - Unfortunately, this project is no longer supported and ceased to work.\
 *2.3) AirGap* - The flow requires a mobile device.\
-*2.4) Cast* (part of *Foundy*) - provides a lot of CLI utilities, but the primary use case is testing web3 applications.
+*2.4) Cast* (part of *Foundry*) - provides a lot of CLI utilities, but the primary use case is testing web3 applications.
 
 How is `w3off` different?
 - Guarantees offline signing
@@ -49,12 +51,14 @@ The solution consists of three modules, intended to be run one after the other:
 
 # Configuration
 You can configure the tool for your own use by following this sequence:
-1) Configure chains and RPC providers in `chains.yaml`
-2) Configure default values or preferences in `config.py`.
-3) The application aims to cache web requests to `cache.json` persistently (mostly, contract ABIs or bytecodes). Since this data rarely chages on the network, the cache is never invalidated by the utilities. Clean the cache manually as needed by removing this file, e.g. if you suspect smart contract info in it may be outdated.
+1) Configure chains and RPC providers in [`w3off/chains.yaml`](w3off/chains.yaml).
+2) [Optional] Configure default values or preferences in [`w3off/config.py`](w3off/config.py).
+3) The application aims to cache web requests to `w3off/cache.json` persistently (mostly, contract ABIs or bytecodes). Since this data rarely chages on the network, the cache is never invalidated by the utilities. Clean the cache manually as needed by removing this file, e.g. if you suspect smart contract info in it may be outdated.
+
+If you are installing the `w3off` package with `pip`, you can put your settings to `~/.w3off` folder, i.e. `~/.w3off/chains.yaml`. In this case, this folder will be used for both settings and cache instead.
 
 # Usage
-Execute the following in CLI and it will launch the tool in interactive mode. It will always prompt you before proceeding to next step so don't worry.
+Download the source code and execute the following in CLI to launch the tool in interactive mode. It will always prompt you before proceeding to next step so don't worry.
 Prerequisite: `pip install` or `conda install` if needed.
 
 At this point, there is no support for CLI parameters (only interactive mode).
@@ -66,7 +70,7 @@ $ python -m unittest discover
 
 Simple launch:
 ```
-$ python w3off
+$ python -m w3off
 ```
 
 Or launch one by one:
@@ -87,6 +91,16 @@ Or this:
 ```
 # send raw transaction passed as a string
 $ echo "0x..." | python -m sender  
+```
+
+
+Alternatively, you can install the executable scripts via `pip`:
+```
+$ pip install w3off
+$ w3off
+$ w3observer
+$ w3signer
+$ w3sender
 ```
 
 <!-- Deprecated:

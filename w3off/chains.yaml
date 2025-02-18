@@ -1,0 +1,140 @@
+# You can browse https://chainlist.org/ for the list of available RPC nodes for each network
+---
+eth:
+  id: 1
+  test: False   # True if this is a test net (e.g. Sepolia)
+  name: "ETH MainNet"
+  currency: "ETH"
+  rpc_provider: "https://eth.llamarpc.com"  # you can use dynamic string with environment variable passed (prompts user for the value is not available), e.g. "https://mainnet.infura.io/v3/{INFURA_API_KEY}"
+  tx_url: 'https://etherscan.io'
+  defaults:  # initial default values are taken from here (eth chain), for other chains specify only if you want different ones (no need to duplicate values)
+    amount: 1500000000  # default ERC20 token amount (note it will be divided by 10 ** decimals)
+    maxgas: 2000000 # default gas limit (typically not used as gas estimate is properly estimated by first running the appropriate tx locally)
+    gas_leeway_coef: 1.1  # default multiplier on gas amount limit, also, gas price deviations by more than this coef will emit warning before confirmation
+    gas_leeway_coef_pessimistic: 1.3  # used when local estimation of gas price is not possible, relying on historical gas used estimation
+    gas_max_priority_fee: 2  # in gwei 
+    gas_max_fee: 10  # max fee per gas
+    pkey_mode: 2  # 1 - in place, 2 - keystore
+    keystore_file: 'w3off/test/data/keystore-default.json'  # use '/', will get converted to OS-independent, you can also use ~ and relative paths wrt where the program resides
+    sender: "0x001d3F1ef827552Ae1114027BD3ECF1f086bA0F9"  # FROM - insert your desired default address
+    destination: "0xF7Edc8FA1eCc32967F827C9043FcAe6ba73afA5c"  # TO (for ERC20 transfers)
+    contract: 'USDT' # this is used as a destination for ETH transaction, in most cases smart contract but could be simple ETH transfer - enter one of smart contract label or address
+    erc20: 'USDT' # default token - enter one of smart contract label from the list below or address
+    tx_type: 2  # 0 - for legacy transactions (gas_price), 2 - for EIP-1559 (base_fee + priority_fee <= max_fee)
+    signer_suggest_keystore: True # if True, suggests user to convert entered private key into an encrypted keystore file stored in cold storage for additional safety during future use
+    verbose: True
+
+  smart_contracts:
+    USDT:
+      address: "0xdAC17F958D2ee523a2206206994597C13D831ec7"
+      debug_overrides:  # overrides below are activated only in DEBUG mode (e.g. smart contract addresses on EthereumTester)
+        address: "0x2946259E0334f33A064106302415aD3391BeD384"
+      type: "ERC20"  # determines transfer() flow
+      desc: "Tether USD stablecoin"
+      decimals: 6
+    USDC:
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"
+      proxy: True
+      implementation: "0x43506849d7c04f9138d1a2050bbf3a0c054402dd"
+      type: "ERC20"
+      desc: "Coinbase USD stablecoin"
+      decimals: 6
+    AAVE_V3:
+      address: "0x87870Bca3F3fD6335C3F4ce8392D69350B4fA4E2"
+      debug_overrides:
+        address: "0xD24260C102B5D128cbEFA0F655E5be3c2370677C"
+      proxy: True
+      implementation: "0xeF434E4573b90b6ECd4a00f4888381e4D0CC5Ccd"
+      type: "Lending"  # determines approve(), supply() , withdraw() flow
+      desc: "Aave v3 USDT lending pool"
+    CURVE_3POOL:
+      address: "0xbEbc44782C7dB0a1A60Cb6fe97d0b483032FF1C7"
+      type: "Exchange"
+      desc: "DAI (0), USDC (1), USDT (2) exchange"
+                
+eth_test:
+  id: 11155111
+  test: True
+  name: "ETH Sepolia TestNet"
+  currency: "sepoliaETH"
+  rpc_provider: "https://ethereum-sepolia-rpc.publicnode.com"
+
+base:
+  id: 8453
+  name: "Base Chain"
+  currency: "ETH"
+  rpc_provider: "https://rpc.ankr.com/base"  # https://base.llamarpc.com"  "https://base-rpc.publicnode.com"  "https://rpc.ankr.com/base"
+  tx_url: "https://basescan.org"
+  defaults:
+    contract: 'AAVE_V3' # this is used as a destination for ETH transaction, in most cases smart contract but could be simple ETH transfer - enter one of smart contract label or address
+    erc20: 'USDC' # default token - enter one of smart contract label from the list below or address
+    amount: 100000000
+  smart_contracts:
+    USDC:
+      address: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913"
+      proxy: True
+      implementation: "0x2Ce6311ddAE708829bc0784C967b7d77D19FD779"
+      type: "ERC20"
+      decimals: 6
+    SUSDS:
+      address: "0x5875eEE11Cf8398102FdAd704C9E96607675467a"
+      type: "ERC20"
+      decimals: 18
+    AAVE_V3:
+      address: "0xA238Dd80C259a72e81d7e4664a9801593F98d1c5"
+      proxy: True
+      implementation: "0x3a9c471f13c9ca1ebdf440cf713c8404e498f9c3"
+    UNISWAP_V3_ROUTER:
+      address: "0x2626664c2603336E57B271c5C0b26F421741e481"
+
+arb:
+  id: 42161
+  name: "Arbitrum"
+  currency: "ETH"
+  rpc_provider: "https://arbitrum.llamarpc.com"
+  tx_url: "https://arbiscan.io"
+
+bnb:
+  id: 56
+  name: "Binance Smart Chain"
+  currency: "BNB"
+  rpc_provider: "https://binance.llamarpc.com"
+  tx_url: "https://bscscan.com"
+
+op:
+  id: 10
+  name: "Optimism MainNet"
+  currency: "ETH"
+  rpc_provider: "https://optimism.llamarpc.com"
+  tx_url: "https://optimistic.etherscan.io"
+
+avax:
+  id: 43114
+  name: "Avalanche"
+  currency: "AVAX"
+  rpc_provider: "https://avalanche.drpc.org"
+
+debug: # eth_tester (EthereumTester) local network
+  id: 131277322940537
+  name: "Ethereum Tester (local)"
+  currency: "ETH"
+  test: True
+  debug: True
+  rpc_provider: "debug"
+  defaults:
+    contract: 'USDT'
+    erc20: 'USDT'
+    sender: "0x001d3F1ef827552Ae1114027BD3ECF1f086bA0F9"  # FROM
+    destination: "0xF7Edc8FA1eCc32967F827C9043FcAe6ba73afA5c"  # TO (for ERC20 transfers)
+  smart_contracts:
+    USDT:
+      address: "0x2946259E0334f33A064106302415aD3391BeD384"
+      type: "ERC20"  # determines transfer() flow
+      desc: "Tether USD stablecoin"
+      decimals: 6
+    AAVE_V3:
+      address: "0xD24260C102B5D128cbEFA0F655E5be3c2370677C"
+      proxy: True
+      implementation: "0xeF434E4573b90b6ECd4a00f4888381e4D0CC5Ccd"
+      type: "Lending"  # determines approve(), supply() , withdraw() flow
+      desc: "Aave v3 USDT lending pool"

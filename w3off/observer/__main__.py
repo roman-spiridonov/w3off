@@ -1,6 +1,6 @@
 import os
 import sys
-from w3off.observer import main
+from w3off.observer.w3observer import main
 
 
 if __name__ == "__main__":
